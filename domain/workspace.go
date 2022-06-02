@@ -20,8 +20,6 @@ func NewWorkspace() *Workspace {
 func (w Workspace) GetStorage(name string) (*Storage, error) {
 	storage, ok := w.storages.Load(name)
 
-	println(ok)
-
 	if !ok {
 		return nil, errors.New("cannot find storage")
 	}
