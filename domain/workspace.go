@@ -17,7 +17,7 @@ func NewWorkspace() *Workspace {
 	return workspace
 }
 
-func (w Workspace) GetStorage(name string) (*Storage, error) {
+func (w *Workspace) GetStorage(name string) (*Storage, error) {
 	storage, ok := w.storages.Load(name)
 
 	if !ok {
